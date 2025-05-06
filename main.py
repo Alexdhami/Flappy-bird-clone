@@ -1,5 +1,6 @@
 import pygame
 from random import randint
+
 pygame.init()
 CLOCK = pygame.time.Clock()
 WIDTH = 1200
@@ -20,7 +21,7 @@ class Flappy(pygame.sprite.Sprite):
         self.birds = []
         
         for i in range(1,4):
-            self.birds.append(pygame.image.load(f'bird{i}.png').convert_alpha())
+            self.birds.append(pygame.image.load(f'assets/bird/bird{i}.png').convert_alpha())
         self.current_bird = 0
         self.image = self.birds[int(self.current_bird)]
         self.rect = self.image.get_rect(center = (self.x,self.y))
@@ -67,8 +68,8 @@ class Pillars(pygame.sprite.Sprite):
         self.speed = 6
         self.images = []
 
-        self.images.append(pygame.image.load('green_pillar.png'))
-        self.images.append(pygame.image.load('red_pillar.png'))
+        self.images.append(pygame.image.load('assets/pillars/green_pillar.png'))
+        self.images.append(pygame.image.load('assets/pillars/red_pillar.png'))
         
         self.current_image = randint(0,1)
         
@@ -101,11 +102,11 @@ pillar_group = pygame.sprite.Group()
 last_time = pygame.time.get_ticks()
 spawn_interval = 1000
 
-bg_image = pygame.transform.scale(pygame.image.load('background.jpg'),(WIDTH,HEIGHT+65))
-ground_image = pygame.transform.scale(pygame.image.load('ground.png'),(WIDTH+WIDTH,HEIGHT))
+bg_image = pygame.transform.scale(pygame.image.load('assets/other/background.jpg'),(WIDTH,HEIGHT+65))
+ground_image = pygame.transform.scale(pygame.image.load('assets/other/ground.png'),(WIDTH+WIDTH,HEIGHT))
 ground_image_rect = ground_image.get_rect()
 
-main_menu_mage = pygame.transform.scale(pygame.image.load('main_menu.png'),(WIDTH,HEIGHT))
+main_menu_mage = pygame.transform.scale(pygame.image.load('assets/other/main_menu.png'),(WIDTH,HEIGHT))
 
 ground_speed = 6
 def update_ground():
@@ -117,7 +118,7 @@ def update_ground():
 def font_work():
     pillar_passed = False
     global SCORE,SEC,secc
-    font = pygame.font.Font('Pixeltype.ttf',50)
+    font = pygame.font.Font('assets/font/Pixeltype.ttf',50)
     
     SCORE = (pygame.time.get_ticks() - SEC)//1000
 
