@@ -2,7 +2,7 @@
 
 This is a simple **Flappy Bird**-style game built using **Pygame**. The player controls a bird that must fly between incoming pillars without colliding. The score increases the longer you survive.
 
-## 🚀 Features
+##  Features
 
 - Pixel-perfect collision detection using masks
 - Animated bird sprites
@@ -11,11 +11,11 @@ This is a simple **Flappy Bird**-style game built using **Pygame**. The player c
 - Live score display
 - Simple main menu screen
 
-## 🎮 Controls
+##  Controls
 
 - `SPACE` - Make the bird jump (both to start the game and in-game)
 
-## 🧠 How It Works
+##  How It Works
 
 - The bird is animated and affected by gravity.
 - Pressing space resets the upward velocity.
@@ -24,7 +24,7 @@ This is a simple **Flappy Bird**-style game built using **Pygame**. The player c
 - The ground and background scroll continuously for a parallax effect.
 - Score is based on how long you survive.
 
-## 📁 Assets
+##  Assets
 
 Make sure to include the following image files in the same directory:
 - `bird1.png`, `bird2.png`, `bird3.png`
@@ -32,12 +32,12 @@ Make sure to include the following image files in the same directory:
 - `background.jpg`, `ground.png`, `main_menu.png`
 - `Pixeltype.ttf` (font file)
 
-## 🛠️ Setup & Run
+##  Setup & Run
 
 1. **Install Pygame** (if not already):
    ```bash
    pip install pygame
-## 🧑‍💻 Author
+##  Author
 Created by `Alex Dhami.`
 
 Feel free to fork and modify!
